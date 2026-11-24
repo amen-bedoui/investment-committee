@@ -75,7 +75,7 @@ committee performance --prices prices.csv --ledger ledger.jsonl      # realised 
 
 ## What makes it trustworthy
 - **No look-ahead**: fundamentals are joined as of publication date; a test multiplies all future prices by 5 and requires identical decisions.
-- **Honest null test**: on a synthetic market without edge the pipeline shows none (about -1.5 %/year over 30 seeds, costs and concentration only).
+- **Honest null test**: on a synthetic market without edge the pipeline shows none (re-run on v1.4.1 over 30 seeds: -1.2 %/year on average versus the equal-weight basket, 6 wins out of 30; costs and concentration, no manufactured edge).
 - **Robustness**: every report includes a parameter sensitivity grid and, in the real-data study, a walk-forward out-of-sample track record.
 - **Explainable**: each signal carries its rationale; the CLI prints the per-agent score table.
 - **Tamper-evident ledger**: edited or deleted sessions are detected by `verify`.
