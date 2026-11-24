@@ -38,7 +38,7 @@ With `--rf` (annual percent series such as ^IRX), uninvested cash accrues the ra
 `report` re-runs the backtest over a grid of `min_score` x `max_position`. Read it as a robustness check: a strategy that works in one cell only is overfitted. Note that higher thresholds mechanically hold more cash, which lowers volatility and drawdown whatever the signal quality, so compare Sharpe and CAGR together.
 
 ## Null-world check
-The synthetic market draws returns independently of fundamentals. Over 30 seeds (v0.2 run) the committee averaged about -1.5 %/year versus the benchmark and won 8 times out of 30: costs and concentration, no manufactured edge. This validates the plumbing (no leak of the future), not the strategy.
+The synthetic market draws returns independently of fundamentals. Over 30 seeds (re-run on v1.4.1, seeds 0-29, default mandate, equal-weight benchmark) the committee averaged -1.2 %/year versus the benchmark (median -1.6 %, standard deviation 2.8 %) and won 6 times out of 30: a small systematic drag from costs and concentration, no manufactured edge. This validates the plumbing (no leak of the future), not the strategy.
 
 ## Paper ledger
 `paper` appends the latest decisions to a JSON-lines file; each entry hashes its content plus the previous hash (SHA-256). `verify` detects edited, removed or reordered sessions. It proves record integrity only; it is not an audit trail and anyone with the file can rebuild a consistent chain from scratch.
