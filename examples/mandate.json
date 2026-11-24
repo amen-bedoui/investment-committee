@@ -1,0 +1,7 @@
+{
+  "weights": {"value": 1.0, "quality": 1.0, "growth": 0.5, "momentum": 1.0},
+  "min_score": 0.10,
+  "max_position": 0.25,
+  "max_drawdown_veto": -0.30,
+  "cost_bps": 10
+}
